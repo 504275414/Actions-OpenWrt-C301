@@ -20,3 +20,4 @@
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
 sed -i 's/IMAGE_PREFIX := $(IMG_PREFIX)-$(1)/IMAGE_PREFIX := $(IMG_PREFIX)-$(1)-$(shell date +%Y%m%d%H%M)/g' include/image.mk
+sed -i 's/VERSION_NUMBER:=$(call qstrip,$(CONFIG_VERSION_NUMBER))/VERSION_NUMBER:=$(call qstrip,$(CONFIG_VERSION_NUMBER))-AndyVane-$(shell date +%Y%m%d%H%M)/g' include/version.mk
